@@ -16,6 +16,8 @@ jobs:
     if: "!contains(github.event.commits[0].message, '[ci skip]')"
     name: 'Ruby ${{ matrix.ruby_version }} ${{ matrix.os }}'
     runs-on: '${{ matrix.os }}'
+    env:
+      PAGES_REPO_NWO: bf2fc6cc711aee1a0c2a/architecture
     strategy:
       fail-fast: false
       matrix:
